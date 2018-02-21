@@ -1,0 +1,13 @@
+<h3>使用者一覽</h3>
+{if $isadmin or $topadmin}
+  <table class="table table-border table-hover">
+    <tr class="danger">
+      <td>使用者編號</td><td>使用者姓名</td><td>使用者信箱</td><td>使用者電話</td><td>使用者權限</td>
+    </tr>
+    {foreach from=$all_users item=user}
+      <tr>
+        <td><a href="user.php?op=display_user&user_sn={$user.user_sn}">{$user.user_sn}</a></td><td>{$user.user_name}</td><td>{$user.user_email}</td><td>{$user.user_tel}</td><td>{$user.user_right}</td>
+      </tr>
+    {/foreach}
+  </table>
+ {/if}

@@ -1,0 +1,30 @@
+body{
+  margin:0;
+  padding:0;
+  background: #000 url(images/bg.jpg) center center fixed no-repeat;
+  -moz-background-size: cover;
+  background-size: cover;
+  font-family: 微軟正黑體;
+  font-size: 16px;
+}
+
+.container{
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#system_head{
+  margin: 15px 0px;
+}
+
+#system_main{
+  min-height: 200px;
+  margin: 15px 0px;
+}
+
+#system_foot{
+ background-color: rgb(51, 61, 101);
+ color: #fff;
+ padding: 30px;
+ line-height: 1.8;
+ margin: 15px 0px;
+}

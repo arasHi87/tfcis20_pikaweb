@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <title>{$system_name}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link href="jquery/jquery-ui.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!--[if lt IE 9]>
+      <script src="bootstrap/js/html5shiv.min.js"></script>
+      <script src="bootstrap/js/respond.min.js"></script>
+    <![endif]-->
+    <script src="jquery/external/jquery/jquery.js"></script>
+    <script src="jquery/jquery-ui.js"></script>
+    <script src="bootstrap/js/jquery.min.js"></script>
+    <script src="bootstrap/js/jquery-migrate.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="system_head">
+        <img src="images/title.jpg" alt="{$system_name}" class="img-responsive">
+      </div>
+
+      <div id="system_main" class="row">
+       <ul class="nav nav-tabs">
+           <li role="presentation" class="active"><a href="#index" aria-controls="index" role="tab" data-toggle="tab">主頁</a></li>
+       </ul>
+       <div class="col-md-9">
+        {if $op=="user_list"}
+          {include file='user_list.html'}
+        {else if $op=="display_user"}
+          {include file="display_user.html"}
+        {else if $op=="user_form"}
+          {include file='user_form.html'}
+        {else if $op=='user_login'}
+          {include file="user_login.html"}
+        {/if}
+        {if !$isuser}
+          {if $op=="user_form"}
+            <div class="col-md-9">
+              {include file='user_form.html'}
+            </div>
+          {else}
+            <div class="col-md-5">
+              {include file='user_login.html'}
+            </div>
+          {/if}
+        {else if $isuser}
+          <div class="col-md-3">
+            {include file='side_tool.html'}
+          </div>
+        {/if}
+       </div>
+      </div>
+
+      <div id="system_foot">
+        <div>當前版本 : vision-1.0.0 beta</div>
+        <div>開發者：TfcisPika</div>
+      </div>
+    </div>
+  </body>
+</html>
