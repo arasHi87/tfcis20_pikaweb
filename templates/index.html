@@ -28,6 +28,7 @@
        <ul class="nav nav-tabs">
            <li role="presentation" class="active"><a href="#index" aria-controls="index" role="tab" data-toggle="tab">主頁</a></li>
        </ul>
+       <br>
        <div class="col-md-9">
         {if $op=="user_list"}
           {include file='user_list.html'}
@@ -35,16 +36,15 @@
           {include file="display_user.html"}
         {else if $op=="user_form"}
           {include file='user_form.html'}
-        {else if $op=='user_login'}
-          {include file="user_login.html"}
         {/if}
-        {if !$isuser}
+       </div>
+       {if !$isuser}
           {if $op=="user_form"}
             <div class="col-md-9">
               {include file='user_form.html'}
             </div>
           {else}
-            <div class="col-md-5">
+            <div class="col-md-7">
               {include file='user_login.html'}
             </div>
           {/if}
@@ -53,7 +53,6 @@
             {include file='side_tool.html'}
           </div>
         {/if}
-       </div>
       </div>
 
       <div id="system_foot">

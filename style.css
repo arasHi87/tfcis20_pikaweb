@@ -28,3 +28,14 @@ body{
  line-height: 1.8;
  margin: 15px 0px;
 }
+
+.btn-yellow {
+  color: #fff;
+  background-color: rgb(248, 252, 9);
+  border-color: rgb(248, 252, 9);
+}
+.btn-yellow:hover, .btn-yellow:focus, .btn-yellow:active:hover{
+  color: #fff;
+  background-color: rgb(248, 252, 9);
+  border-color: rgb(248, 252, 9);
+}

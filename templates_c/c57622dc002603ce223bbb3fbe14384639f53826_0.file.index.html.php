@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-21 06:29:20
+/* Smarty version 3.1.29, created on 2018-02-21 07:22:23
   from "D:\UniServerZ\www\pika\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8d11c0e2aa26_31052982',
+  'unifunc' => 'content_5a8d1e2fe7e2a3_56943259',
   'file_dependency' => 
   array (
     'c57622dc002603ce223bbb3fbe14384639f53826' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\index.html',
-      1 => 1519194556,
+      1 => 1519197740,
       2 => 'file',
     ),
   ),
@@ -20,11 +20,11 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:user_list.html' => 1,
     'file:display_user.html' => 1,
     'file:user_form.html' => 2,
-    'file:user_login.html' => 2,
+    'file:user_login.html' => 1,
     'file:side_tool.html' => 1,
   ),
 ),false)) {
-function content_5a8d11c0e2aa26_31052982 ($_smarty_tpl) {
+function content_5a8d1e2fe7e2a3_56943259 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant">
@@ -72,6 +72,7 @@ function content_5a8d11c0e2aa26_31052982 ($_smarty_tpl) {
        <ul class="nav nav-tabs">
            <li role="presentation" class="active"><a href="#index" aria-controls="index" role="tab" data-toggle="tab">主頁</a></li>
        </ul>
+       <br>
        <div class="col-md-9">
         <?php if ($_smarty_tpl->tpl_vars['op']->value == "user_list") {?>
           <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
@@ -85,12 +86,9 @@ function content_5a8d11c0e2aa26_31052982 ($_smarty_tpl) {
           <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'user_login') {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_login.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
         <?php }?>
-        <?php if (!$_smarty_tpl->tpl_vars['isuser']->value) {?>
+       </div>
+       <?php if (!$_smarty_tpl->tpl_vars['isuser']->value) {?>
           <?php if ($_smarty_tpl->tpl_vars['op']->value == "user_form") {?>
             <div class="col-md-9">
               <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
@@ -98,8 +96,8 @@ function content_5a8d11c0e2aa26_31052982 ($_smarty_tpl) {
 
             </div>
           <?php } else { ?>
-            <div class="col-md-5">
-              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_login.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+            <div class="col-md-7">
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_login.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
             </div>
@@ -111,7 +109,6 @@ function content_5a8d11c0e2aa26_31052982 ($_smarty_tpl) {
 
           </div>
         <?php }?>
-       </div>
       </div>
 
       <div id="system_foot">
