@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 11:30:34
+/* Smarty version 3.1.29, created on 2018-02-22 14:43:33
   from "D:\UniServerZ\www\pika\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8ea9da5edea1_49370222',
+  'unifunc' => 'content_5a8ed71587f750_04744834',
   'file_dependency' => 
   array (
     'c57622dc002603ce223bbb3fbe14384639f53826' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\index.html',
-      1 => 1519299024,
+      1 => 1519310608,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:side_act.html' => 1,
   ),
 ),false)) {
-function content_5a8ea9da5edea1_49370222 ($_smarty_tpl) {
+function content_5a8ed71587f750_04744834 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant">
@@ -47,6 +47,7 @@ function content_5a8ea9da5edea1_49370222 ($_smarty_tpl) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/icon.png" />
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="jquery/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
