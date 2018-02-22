@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-21 05:30:34
+/* Smarty version 3.1.29, created on 2018-02-22 11:26:54
   from "D:\UniServerZ\www\pika\templates\user_login.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8d03fae59a34_02009432',
+  'unifunc' => 'content_5a8ea8fecf75d2_83926740',
   'file_dependency' => 
   array (
     'b2de199551f10775780db452273a99e70f8eef46' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\user_login.html',
-      1 => 1519189176,
+      1 => 1516717681,
       2 => 'file',
     ),
   ),
@@ -19,29 +19,30 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8d03fae59a34_02009432 ($_smarty_tpl) {
+function content_5a8ea8fecf75d2_83926740 ($_smarty_tpl) {
 ?>
 <form action="user.php" method="post" role="form" class="form-horizontal">
-    <div class="form-group">
-      <label class="col-md-2 control-label">帳號 : </label>
-      <div class="col-md-5">
-        <input type="text" name="user_id" id="user_id" class="form-control" placeholder="請輸入帳號">
-      </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">帳號 : </label>
+    <div class="col-md-5">
+      <input type="text" name="user_id" id="user_id" class="form-control" placeholder="請輸入帳號">
     </div>
-    <div class="form-group">
-      <label class="col-md-2 control-label">密碼 : </label>
-      <div class="col-md-5">
-        <input type="password" name="user_passwd" id="user_passwd" class="form-control" placeholder="請輸入密碼">
-      </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">密碼 : </label>
+    <div class="col-md-5">
+      <input type="password" name="user_passwd" id="user_passwd" class="form-control" placeholder="請輸入密碼">
     </div>
-    <div class="form-group">
-      <label class="col-md-2 control-label">
-        <a href="user.php?op=user_form" class="btn btn-link">註冊</a>
-      </label>
-      <div class="col-md-5">
-        <input type="hidden" name="op" value="user_login">
-        <button type="submit" name="button" class="btn btn-primary btn-block">登入</button>
-      </div>
+  </div>
+  <div class="form-group">
+    <label class="col-md-2 control-label">
+      <a href="user.php?op=user_form" class="btn btn-link">註冊</a>
+    </label>
+    <div class="col-md-5">
+      <input type="hidden" name="op" value="user_login">
+      <button type="submit" name="button" class="btn btn-primary btn-block">登入</button>
     </div>
-  </form><?php }
+  </div>
+</form>
+<?php }
 }

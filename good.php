@@ -15,6 +15,7 @@ switch ($op) {
         break;
 
     case 'update_goods':
+        require_once "function/good/save_goods_file.php";
         require_once "function/goood/save_goods_pic.php";
         require_once "function/good/update_goods.php";
         update_goods($goods_sn);
@@ -31,7 +32,8 @@ switch ($op) {
         break;
 
     case 'insert_goods':
-        require_once "function/goood/save_goods_pic.php";
+        require_once "function/good/save_goods_file.php";
+        require_once "function/good/save_goods_pic.php";
         require_once "function/good/insert_goods.php";
         $goods_sn = insert_goods();
         header("location:good.php?op=display_goods&goods_sn={$goods_sn}&panel_sn={$panel_sn}");

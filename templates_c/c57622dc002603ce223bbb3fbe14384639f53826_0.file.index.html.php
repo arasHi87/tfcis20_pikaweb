@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 10:37:25
+/* Smarty version 3.1.29, created on 2018-02-22 11:30:34
   from "D:\UniServerZ\www\pika\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8e9d6550b276_49282144',
+  'unifunc' => 'content_5a8ea9da5edea1_49370222',
   'file_dependency' => 
   array (
     'c57622dc002603ce223bbb3fbe14384639f53826' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\index.html',
-      1 => 1519295841,
+      1 => 1519299024,
       2 => 'file',
     ),
   ),
@@ -37,7 +37,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:side_act.html' => 1,
   ),
 ),false)) {
-function content_5a8e9d6550b276_49282144 ($_smarty_tpl) {
+function content_5a8ea9da5edea1_49370222 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant">

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-21 06:27:31
+/* Smarty version 3.1.29, created on 2018-02-22 11:25:55
   from "D:\UniServerZ\www\pika\templates\side_tool.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8d11538c80e4_12038716',
+  'unifunc' => 'content_5a8ea8c3cfbe74_49718679',
   'file_dependency' => 
   array (
     'eaefa247a88baa80889fd876decc7137fca4cd8f' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8d11538c80e4_12038716 ($_smarty_tpl) {
+function content_5a8ea8c3cfbe74_49718679 ($_smarty_tpl) {
 if (!$_smarty_tpl->tpl_vars['isuser']->value) {?>
   <input type="hidden" name="op" value="user_login">
   <div class="alert alert-danger">請先登入!</div>

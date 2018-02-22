@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 10:37:45
+/* Smarty version 3.1.29, created on 2018-02-22 11:25:55
   from "D:\UniServerZ\www\pika\templates\side_act.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8e9d7952c693_23008105',
+  'unifunc' => 'content_5a8ea8c3d3f9e4_52152480',
   'file_dependency' => 
   array (
     'c2f9a24e9f8640322a1cc80c371e5755de4eb1f2' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8e9d7952c693_23008105 ($_smarty_tpl) {
+function content_5a8ea8c3d3f9e4_52152480 ($_smarty_tpl) {
 ?>
 <div class="panel panel-danger">
   <div class="panel-heading">站務公告</div>

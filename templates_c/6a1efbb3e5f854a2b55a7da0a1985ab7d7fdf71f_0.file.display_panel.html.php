@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 10:15:26
+/* Smarty version 3.1.29, created on 2018-02-22 13:56:28
   from "D:\UniServerZ\www\pika\templates\display_panel.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8e983edd03e0_05284232',
+  'unifunc' => 'content_5a8ecc0c4e3c12_62809029',
   'file_dependency' => 
   array (
     '6a1efbb3e5f854a2b55a7da0a1985ab7d7fdf71f' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\display_panel.html',
-      1 => 1519294521,
+      1 => 1519307764,
       2 => 'file',
     ),
   ),
@@ -19,12 +19,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8e983edd03e0_05284232 ($_smarty_tpl) {
+function content_5a8ecc0c4e3c12_62809029 ($_smarty_tpl) {
 ?>
 <div class="row">
   <?php if ($_smarty_tpl->tpl_vars['isadmin']->value) {?>
     <div class="col-md-4">
-      <a href="panel.php?op=goods_form&panel_sn=<?php echo $_smarty_tpl->tpl_vars['panel_sn']->value;?>
+      <a href="good.php?op=goods_form&panel_sn=<?php echo $_smarty_tpl->tpl_vars['panel_sn']->value;?>
 " class="btn btn-block btn-primary">新增投稿</a>
     </div>
     <div class="col-md-4">
@@ -50,7 +50,8 @@ $_smarty_tpl->tpl_vars['goods']->_loop = true;
 $__foreach_goods_0_saved_local_item = $_smarty_tpl->tpl_vars['goods'];
 ?>
   <ul>
-    <li><a href="index.php?op=display_goods&goods_sn=<?php echo $_smarty_tpl->tpl_vars['goods']->value['goods_sn'];?>
+    <li><a href="good.php?op=display_goods&goods_sn=<?php echo $_smarty_tpl->tpl_vars['goods']->value['goods_sn'];?>
+&panel_sn=<?php echo $_smarty_tpl->tpl_vars['goods']->value['panel_sn'];?>
 "><?php echo $_smarty_tpl->tpl_vars['goods']->value['goods_title'];?>
 </a></li>
   </ul>

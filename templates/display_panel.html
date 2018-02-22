@@ -1,7 +1,7 @@
 <div class="row">
   {if $isadmin}
     <div class="col-md-4">
-      <a href="panel.php?op=goods_form&panel_sn={$panel_sn}" class="btn btn-block btn-primary">新增投稿</a>
+      <a href="good.php?op=goods_form&panel_sn={$panel_sn}" class="btn btn-block btn-primary">新增投稿</a>
     </div>
     <div class="col-md-4">
       <a href="panel.php?op=panel_form&panel_sn={$panel_sn}" class="btn btn-block btn-warning">編輯面板</a>
@@ -13,7 +13,7 @@
   {/if}
   {foreach from=$panel item=goods}
   <ul>
-    <li><a href="index.php?op=display_goods&goods_sn={$goods.goods_sn}">{$goods.goods_title}</a></li>
+    <li><a href="good.php?op=display_goods&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}">{$goods.goods_title}</a></li>
   </ul>
   {/foreach}
 </div>

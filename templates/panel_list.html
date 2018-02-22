@@ -2,10 +2,10 @@
   {foreach from=$all_panel item=panel}
   <div class="col-md-12">
     <div class="thumbnail">
-      <a href="index.php?op=display_panel&panel_sn={$panel.panel_sn}"><img src="{$panel.pic}" alt="{$panel.panel_title}">
+      <a href="panel.php?op=display_panel&panel_sn={$panel.panel_sn}"><img src="{$panel.pic}" alt="{$panel.panel_title}">
         <div class="caption">
           <div style="height: 60px">
-            <h3><a href="index.php?op=display_panel&panel_sn={$panel.panel_sn}">{$panel.panel_title}</a></h3>
+            <h3><a href="panel.php?op=display_panel&panel_sn={$panel.panel_sn}">{$panel.panel_title}</a></h3>
               <div class="col-md-6" style="font-size: 20px">本版人氣：{$panel.panel_counter}</div>
           </div>
         </div>

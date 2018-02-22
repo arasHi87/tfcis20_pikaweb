@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 10:37:25
+/* Smarty version 3.1.29, created on 2018-02-22 11:26:54
   from "D:\UniServerZ\www\pika\templates\latest_act.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8e9d656a1852_27007878',
+  'unifunc' => 'content_5a8ea8fed4e673_73502960',
   'file_dependency' => 
   array (
     'e86345186744edd4097a165e4204ea2090f86abf' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8e9d656a1852_27007878 ($_smarty_tpl) {
+function content_5a8ea8fed4e673_73502960 ($_smarty_tpl) {
 ?>
 <h2>最新公告</h2>
 <?php

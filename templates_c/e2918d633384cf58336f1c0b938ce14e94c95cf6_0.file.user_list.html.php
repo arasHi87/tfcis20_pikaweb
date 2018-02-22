@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-21 06:09:10
+/* Smarty version 3.1.29, created on 2018-02-22 11:26:58
   from "D:\UniServerZ\www\pika\templates\user_list.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8d0d06272a09_63128209',
+  'unifunc' => 'content_5a8ea9028c8267_16016415',
   'file_dependency' => 
   array (
     'e2918d633384cf58336f1c0b938ce14e94c95cf6' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8d0d06272a09_63128209 ($_smarty_tpl) {
+function content_5a8ea9028c8267_16016415 ($_smarty_tpl) {
 ?>
 <h3>使用者一覽</h3>
 <?php if ($_smarty_tpl->tpl_vars['isadmin']->value || $_smarty_tpl->tpl_vars['topadmin']->value) {?>

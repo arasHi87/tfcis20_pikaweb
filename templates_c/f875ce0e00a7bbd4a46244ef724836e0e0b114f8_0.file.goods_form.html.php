@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 10:15:29
+/* Smarty version 3.1.29, created on 2018-02-22 13:54:37
   from "D:\UniServerZ\www\pika\templates\goods_form.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8e9841236720_20864179',
+  'unifunc' => 'content_5a8ecb9dc0d290_71396011',
   'file_dependency' => 
   array (
     'f875ce0e00a7bbd4a46244ef724836e0e0b114f8' => 
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8e9841236720_20864179 ($_smarty_tpl) {
+function content_5a8ecb9dc0d290_71396011 ($_smarty_tpl) {
 ?>
 <h1>編輯單元</h1>
 <form action="good.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
