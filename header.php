@@ -31,3 +31,53 @@ if (isset($_SESSION['user_sn'])) {
 $smarty->assign('topadmin', $topadmin);
 $smarty->assign('isadmin', $isadmin);
 $smarty->assign('isuser', $isuser);
+
+/* 流程 */
+if ($isuser) {
+  side_act();
+} else {
+  latest_act();
+}
+
+/* 本檔案使用函數 */
+
+//站務列表
+function side_act()
+{
+    global $mysqli, $smarty;
+    include_once "class/PageBar.php";
+    $sql     = "SELECT * FROM `act` ORDER BY `act_date` desc";
+    $PageBar = getPageBar($sql, 3, 1);
+    $bar     = $PageBar['bar'];
+    $sql     = $PageBar['sql'];
+    $total   = $PageBar['total'];
+    $result  = $mysqli->query($sql) or die($mysqli->connect_error);
+    $i = 0;
+    while ($act = $result->fetch_assoc()) {
+        $new_act[$i]       = $act;
+        $new_act[$i]['pic'] = get_act_pic($act['act_sn'], 'actthumbs');
+        $i++;
+    }
+    $smarty->assign('new_act', $new_act);
+    $smarty->assign('total', $total);
+    $smarty->assign('bar', $bar);
+}
+
+//最新公告
+function latest_act() {
+  global $mysqli, $smarty;
+  include_once "class/PageBar.php";
+    $sql     = "SELECT * FROM `act` ORDER BY `act_date` desc";
+    $PageBar = getPageBar($sql, 1, 1);
+    $bar     = $PageBar['bar'];
+    $sql     = $PageBar['sql'];
+    $result  = $mysqli->query($sql) or die($mysqli->connect_error);
+    $i = 0;
+    while ($act = $result->fetch_assoc()) {
+        $latest_act[$i] = $act;
+        $latest_act[$i]['pic'] = get_act_pic($act['act_sn'], 'act');
+        $i++;
+    }
+    $smarty->assign('latest_act', $latest_act);
+    $smarty->assign('bar', $bar);
+}

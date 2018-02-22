@@ -56,3 +56,15 @@ function get_goods_pic($goods_sn = '', $panel_sn = "",  $type = "")
         return "http://dummyimage.com/{$size}/889dd1/ffffff.gif&text=無商品照片";
     }
 }
+
+//取得商品圖片
+function get_act_pic($act_sn = '', $type = "")
+{
+    $filename = "uploads/{$type}/{$act_sn}.png";
+    if (file_exists($filename)) {
+        return $filename;
+    } else {
+        $size = ($type == 'thumbs') ? "300x200" : "600x400";
+        return "http://dummyimage.com/{$size}/889dd1/ffffff.gif&text=公告無照片";
+    }
+}
