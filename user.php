@@ -21,6 +21,7 @@ switch ($op) {
 
   case 'update_user':
       require_once "function/user/update_user.php";
+      require_once "function/user/save_user_pic.php";
       update_user();
       header("location:{$_SERVER['PHP_SELF']}?op=display_user&user_sn=$user_sn");
       exit;

@@ -29,9 +29,6 @@
         {if isset($msg)}
           <div class="alert alert-danger">{$msg}</div>
         {/if}
-        {if isset($smsg)}
-          <div class="alert alert-success">{$smsg}</div>
-        {/if}
         {if $isuser or $topadmin or $isadmin}
           <div class="col-md-9">
             {if $op=="user_list"}

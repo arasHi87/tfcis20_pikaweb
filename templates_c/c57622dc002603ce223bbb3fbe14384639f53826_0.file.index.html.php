@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-21 07:43:57
+/* Smarty version 3.1.29, created on 2018-02-22 10:37:25
   from "D:\UniServerZ\www\pika\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8d233deb6e93_26607149',
+  'unifunc' => 'content_5a8e9d6550b276_49282144',
   'file_dependency' => 
   array (
     'c57622dc002603ce223bbb3fbe14384639f53826' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\index.html',
-      1 => 1519198884,
+      1 => 1519295841,
       2 => 'file',
     ),
   ),
@@ -32,10 +32,12 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:act_form.html' => 1,
     'file:act_list.html' => 1,
     'file:user_login.html' => 1,
+    'file:latest_act.html' => 1,
     'file:side_tool.html' => 1,
+    'file:side_act.html' => 1,
   ),
 ),false)) {
-function content_5a8d233deb6e93_26607149 ($_smarty_tpl) {
+function content_5a8e9d6550b276_49282144 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant">
@@ -48,6 +50,7 @@ function content_5a8d233deb6e93_26607149 ($_smarty_tpl) {
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="jquery/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="class/prism.css" rel="stylesheet" />
     <!--[if lt IE 9]>
       <?php echo '<script'; ?>
  src="bootstrap/js/html5shiv.min.js"><?php echo '</script'; ?>
@@ -56,6 +59,9 @@ function content_5a8d233deb6e93_26607149 ($_smarty_tpl) {
  src="bootstrap/js/respond.min.js"><?php echo '</script'; ?>
 >
     <![endif]-->
+    <?php echo '<script'; ?>
+ src="class/prism.js"><?php echo '</script'; ?>
+>
     <?php echo '<script'; ?>
  src="jquery/external/jquery/jquery.js"><?php echo '</script'; ?>
 >
@@ -78,76 +84,77 @@ function content_5a8d233deb6e93_26607149 ($_smarty_tpl) {
         <img src="images/title.jpg" alt="<?php echo $_smarty_tpl->tpl_vars['system_name']->value;?>
 " class="img-responsive">
       </div>
-
       <div id="system_main" class="row">
-       <ul class="nav nav-tabs">
-           <li role="presentation" class="active"><a href="#index" aria-controls="index" role="tab" data-toggle="tab">主頁</a></li>
-       </ul>
-       <br>
-       <div class="col-md-9">
-        <?php if ($_smarty_tpl->tpl_vars['op']->value == "user_list") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "display_user") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_user.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "user_form") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "fact_form") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:fact_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "fact_list") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:fact_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "panel_form") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:panel_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "panel_list") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:panel_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "display_panel") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_panel.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "goods_form") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:goods_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'find_list') {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:find_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "display_goods") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_goods.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'display_act') {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_act.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "act_form") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:act_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "act_list") {?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:act_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
-?>
-
-        <?php } else { ?>
-          <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:panel_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
-?>
-
+        <?php if (isset($_smarty_tpl->tpl_vars['msg']->value)) {?>
+          <div class="alert alert-danger"><?php echo $_smarty_tpl->tpl_vars['msg']->value;?>
+</div>
         <?php }?>
-       </div>
-       <?php if (!$_smarty_tpl->tpl_vars['isuser']->value) {?>
+        <?php if ($_smarty_tpl->tpl_vars['isuser']->value || $_smarty_tpl->tpl_vars['topadmin']->value || $_smarty_tpl->tpl_vars['isadmin']->value) {?>
+          <div class="col-md-9">
+            <?php if ($_smarty_tpl->tpl_vars['op']->value == "user_list") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "display_user") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_user.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "user_form") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "fact_form") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:fact_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "fact_list") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:fact_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "panel_form") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:panel_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "panel_list") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:panel_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "display_panel") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_panel.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "goods_form") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:goods_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'find_list') {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:find_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "display_goods") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_goods.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'display_act') {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:display_act.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "act_form") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:act_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "act_list") {?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:act_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php } else { ?>
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:panel_list.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
+?>
+
+            <?php }?>
+          </div>
+        <?php }?>
+        <?php if (!$_smarty_tpl->tpl_vars['isuser']->value) {?>
           <?php if ($_smarty_tpl->tpl_vars['op']->value == "user_form") {?>
             <div class="col-md-9">
               <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
@@ -155,24 +162,33 @@ function content_5a8d233deb6e93_26607149 ($_smarty_tpl) {
 
             </div>
           <?php } else { ?>
-            <div class="col-md-7">
+            <div class="col-md-5">
               <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_login.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
             </div>
-          <?php }?>
-        <?php } elseif ($_smarty_tpl->tpl_vars['isuser']->value) {?>
-          <div class="col-md-3">
-            <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:side_tool.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+            <div class="col-md-7">
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:latest_act.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-          </div>
+            </div>
+          <?php }?>
+        <?php }?>
+        <?php if ($_smarty_tpl->tpl_vars['isuser']->value) {?>
+            <div class="col-md-3">
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:side_tool.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+              <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:side_act.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            </div>
         <?php }?>
       </div>
 
       <div id="system_foot">
-        <div>當前版本 : vision-1.0.0 beta</div>
-        <div>開發者：TfcisPika</div>
+        <div>當前版本 : vision-1.1.1 beta</div>
+        <div>開發者：伊嵐</div>
       </div>
     </div>
   </body>

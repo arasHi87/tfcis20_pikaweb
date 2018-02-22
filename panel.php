@@ -16,8 +16,8 @@ switch ($op) {
     break;
 
   case 'insert_panel':
-    require_once "function/panel/insert_panel.php";
     require_once "function/panel/save_panel_pic.php";
+    require_once "function/panel/insert_panel.php";
     $panel_sn = insert_panel();
     header("location:index.php?panel_sn={$panel_sn}");
     break;
@@ -37,9 +37,8 @@ switch ($op) {
     break;
 
   case 'display_panel':
-    require_once "function/panel/display_panel.php";
-    require_once "function/panel/get_panel_pic.php";
     require_once "function/panel/add_panel_counter.php";
+    require_once "function/panel/display_panel.php";
     display_panel($panel_sn);
     break;
 
