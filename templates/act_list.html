@@ -1,0 +1,17 @@
+<div class="row">
+  {foreach  from=$all_act item=act}
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+      <a href="index.php?op=display_act&act_sn={$act.act_sn}"><img src="{$act.pic}" alt="{$act.act_title}"></a>
+        <div class="caption">
+          <div style="height: 60px;">
+            <h3><a href="act.php?op=display_act&act_sn={$act.act_sn}">{$act.act_title}</a></h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  {/foreach}
+</div>
+
+共有 {$total} 件公告
+{$bar}

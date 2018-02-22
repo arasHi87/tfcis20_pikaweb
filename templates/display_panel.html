@@ -1,0 +1,21 @@
+<div class="row">
+  {if $isAdmin}
+    <div class="col-md-4">
+      <a href="tool.php?op=goods_form&panel_sn={$panel_sn}" class="btn btn-block btn-primary">新增投稿</a>
+    </div>
+    <div class="col-md-4">
+      <a href="panel.php?op=panel_form&panel_sn={$panel_sn}" class="btn btn-block btn-warning">編輯面板</a>
+    </div>
+    <div class="col-md-4">
+      <a href="panel.php?op=delete_panel&panel_sn={$panel_sn}" class="btn btn-block btn-danger">刪除面板</a>
+    </div>
+  {/if}
+  {foreach from=$panel item=goods}
+  <ul>
+    <li><a href="index.php?op=display_goods&goods_sn={$goods.goods_sn}">{$goods.goods_title}</a></li>
+  </ul>
+  {/foreach}
+</div>
+
+共有{$total}件資料
+{$bar}

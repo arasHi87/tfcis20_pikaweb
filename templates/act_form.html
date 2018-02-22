@@ -1,0 +1,38 @@
+<h1>編輯站務</h1>
+<form action="act.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+  <div class="form-group">
+    <label class="col-md-2 control-label">公告名稱：</label>
+    <div class="col-md-10">
+      <input type="text" class="form-control" name="act_title" id="act_title" placeholder="請輸入公告名稱" value="{$act.act_title}">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">公告內容：</label>
+    <div class="col-md-10">
+      <textarea class="form-control" name="act_content" id="act_content" placeholder="請輸入公告內容">{$act.act_content}</textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">公告圖片：</label>
+    <div class="col-md-10">
+      <input type="file" name="act_pic" id="act_pic">
+      {if isset($act.pic)}
+          <img src="{$act.pic}" alt="{$act.act_title}">
+      {/if}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-offset-2 col-md-10">
+      {if isset($act.act_sn) and $act.act_sn > 0}
+        <input type="hidden" name="op" value="update_act">
+        <input type="hidden" name="act_sn" value="{$act.act_sn}">
+      {else}
+        <input type="hidden" name="op" value="insert_act">
+      {/if}
+      <button type="submit" class="btn btn-primary">發佈公告</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,38 @@
+<h1>編輯面板</h1>
+<form action="panel.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+  <div class="form-group">
+    <label class="col-md-2 control-label">面板名稱：</label>
+    <div class="col-md-10">
+      <input type="text" class="form-control" name="panel_title" id="panel_title" placeholder="請輸入面板名稱" value="{$panel.panel_title}">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2 control-label">面板簡介：</label>
+    <div class="col-md-10">
+      <textarea class="form-control" name="panel_content" id="panel_content" placeholder="請輸入面板簡介">{$panel.panel_content}</textarea>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-md-2">面板圖片：</label>
+    <div class="col-md-10">
+      <input type="file" name="panel_pic" id="panel_pic">
+      {if isset($panel.pic)}
+          <img src="{$panel.pic}" alt="{$panel.panel_title}">
+      {/if}
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="col-md-offset-2">
+      {if isset($panel.panel_sn) and $panel.panel_sn > 0}
+          <input type="hidden" name="op" value="update_panel">
+          <input type="hidden" name="panel_sn" value="{$panel.panel_sn}">
+      {else}
+          <input type="hidden" name="op" value="insert_panel">
+      {/if}
+      <button type="submit" class="btn btn-primary">儲存面板</button>
+    </div>
+  </div>
+</form>

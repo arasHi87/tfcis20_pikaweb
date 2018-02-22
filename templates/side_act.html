@@ -1,0 +1,21 @@
+<div class="panel panel-danger">
+  <div class="panel-heading">站務公告</div>
+  <div class="panel-body">
+    {foreach from=$new_act item=act}
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <a href="act.php?op=display_act&act_sn={$act.act_sn}"><img src="{$act.pic}" alt="{$act.act_title}"></a>
+        <div class="caption">
+          <div style="height: 60px;">
+            <h3><a href="act.php?op=display_act&act_sn={$act.act_sn}">{$act.act_title}</a></h3>
+          </div>
+          <div class="row">
+            <div class="col-md-12">瀏覽人數：{$act.act_counter}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {/foreach}
+    <a href="act.php?op=act_list">點我查看全部...</a>
+  </div>
+</div>

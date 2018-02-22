@@ -1,0 +1,18 @@
+<h2>最新公告</h2>
+{foreach from=$latest_act item=act}
+  <div class="row">
+    <div class="col-md-6">
+      <img src="{$act.pic}" alt="{$act.act_title}" class="img-thumbnail">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <h4><div style="color:rgb(255, 30, 0);">{$act.act_title}</div></h4>
+  </div>
+  <br>
+  <div class="row">
+    <pre>
+      {$act.act_content}
+    </pre>
+  </div>
+{/foreach}

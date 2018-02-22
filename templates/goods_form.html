@@ -1,0 +1,67 @@
+<h1>編輯單元</h1>
+<form action="good.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
+    <div class="form-group">
+        <label class="col-md-2 control-label">單元名稱：</label>
+        <div class="col-md-10">
+            <input type="text" class="form-control" name="goods_title" id="goods_title" placeholder="請輸入單元名稱" value="{$goods.goods_title}">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">單元內容：</label>
+        <div class="col-md-10">
+            <textarea class="form-control" name="goods_content" id="goods_content" placeholder="請輸入單元內容">{$goods.goods_content}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-lanel">單元補充：</label>
+        <div class="col-md-10">
+            <textarea class="form-control" name="goods_another" id="goods_another" placeholder="請輸入單元補充">{$goods.goods_another}</textarea>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">上傳檔案：</label>
+        <div class="col-md-10">
+            <input type="file" name="goods_file" id="goods_file">
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="col-md-2 control-label">單元圖片：</label>
+        <div class="col-md-10">
+            <input type="file" name="goods_pic" id="goods_pic">
+            <br>
+            {if isset($goods.pic)}
+              <div class="row">
+                <div class="col-md-6">
+                  <a href="#" class="thumbnail">
+                    <img src="{$goods.pic}" alt="{$goods.goods_title}">
+                  </a>
+                </div>
+              </div>
+            {/if}
+        </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-md-2 control-label">面板位置：</label>
+      <div class="col-md-10">
+        <input type="hidden" name="panel_sn" id="panel_sn" value="{$panel.panel_sn}">
+        <p class="text-danger bg-danger">{$panel.panel_title}</p>
+      </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            {if isset($goods.goods_sn) and $goods.goods_sn > 0}
+                <input type="hidden" name="op" value="update_goods">
+                <input type="hidden" name="goods_sn" value="{$goods.goods_sn}">
+            {else}
+                <input type="hidden" name="op" value="insert_goods">
+            {/if}
+            <button type="submit" class="btn btn-primary">儲存內容</button>
+        </div>
+    </div>
+</form>

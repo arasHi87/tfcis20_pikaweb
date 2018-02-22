@@ -1,0 +1,48 @@
+<div class="row">
+  <div class="col-md-6">
+    <img src="{$goods.pic}" alt="{$goods.goods_title}" class="img-thumbnail">
+  </div>
+  <div class="col-md-6">
+    <h2>{$goods.goods_title}</h2>
+    <p>瀏覽人數：{$goods.goods_counter}</p>
+    <p>發布者：{$goods.user_name}</p>
+    <p>發布時間：{$goods.goods_date}</p>
+    <div>
+    {if $isadmin}
+        <a href="good.php?op=goods_form&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}" class="btn btn-warning">編輯資料</a>
+        <a href="good.php?op=delete_goods&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}" class="btn btn-danger">刪除單元</a>
+    {/if}
+    </div>
+  </div>
+</div>
+<div>
+  <h3>{$goods.goods_title}</h3>
+  <pre>
+    <span style="font-size:20px;">
+        {$goods.goods_content}
+    </span>
+  </pre>
+</div>
+<br>
+<ul class="nav nav-tabs">
+  <li role="presentation" class="active"><a href="#another_goods" aria-controls="another_goods" role="tab" data-toggle="tab">補充資料</a></li>
+  <li role="presentation"><a href="#goods_file" aria-controls="goods_file" role="tab" data-toggle="tab">檔案下載</a></li>
+</ul>
+<br>
+<div class="tab-content">
+  <div role="tabpanel" class="tab-pane" id="another_goods">
+    {if isset($goods.goods_another) and $goods.goods_another != ''}
+      {$goods.goods_another}
+    {else}
+      本單元暫時沒有補充喔!!!
+    {/if}
+  </div>
+  <div role="tabpanel" class="tab-pane" id="goods_file">
+    {if isset($goods.goods_name) and ($goods.goods_name) != ''}
+      <a href="good.php?op=download_file&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}">點我下載檔案</a>
+    {else}
+      本單元暫時沒有檔案可以下載喔!！!
+    {/if}
+  </div>
+</div>
+

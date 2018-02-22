@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link href="jquery/jquery-ui.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link href="class/prism.css" rel="stylesheet" />
     <!--[if lt IE 9]>
       <script src="bootstrap/js/html5shiv.min.js"></script>
       <script src="bootstrap/js/respond.min.js"></script>
     <![endif]-->
+    <script src="class/prism.js"></script>
     <script src="jquery/external/jquery/jquery.js"></script>
     <script src="jquery/jquery-ui.js"></script>
     <script src="bootstrap/js/jquery.min.js"></script>
@@ -23,41 +25,73 @@
       <div id="system_head">
         <img src="images/title.jpg" alt="{$system_name}" class="img-responsive">
       </div>
-
       <div id="system_main" class="row">
-       <ul class="nav nav-tabs">
-           <li role="presentation" class="active"><a href="#index" aria-controls="index" role="tab" data-toggle="tab">主頁</a></li>
-       </ul>
-       <br>
-       <div class="col-md-9">
-        {if $op=="user_list"}
-          {include file='user_list.html'}
-        {else if $op=="display_user"}
-          {include file="display_user.html"}
-        {else if $op=="user_form"}
-          {include file='user_form.html'}
+        {if isset($msg)}
+          <div class="alert alert-danger">{$msg}</div>
         {/if}
-       </div>
-       {if !$isuser}
+        {if isset($smsg)}
+          <div class="alert alert-success">{$smsg}</div>
+        {/if}
+        {if $isuser or $topadmin or $isadmin}
+          <div class="col-md-9">
+            {if $op=="user_list"}
+              {include file='user_list.html'}
+            {else if $op=="display_user"}
+              {include file="display_user.html"}
+            {else if $op=="user_form"}
+              {include file='user_form.html'}
+            {else if $op=="fact_form"}
+              {include file='fact_form.html'}
+            {else if $op=="fact_list"}
+              {include file='fact_list.html'}
+            {else if $op=="panel_form"}
+              {include file='panel_form.html'}
+            {else if $op=="panel_list"}
+              {include file='panel_list.html'}
+            {else if $op=="display_panel"}
+              {include file='display_panel.html'}
+            {else if $op=="goods_form"}
+              {include file='goods_form.html'}
+            {else if $op=='find_list'}
+              {include file='find_list.html'}
+            {else if $op=="display_goods"}
+              {include file='display_goods.html'}
+            {else if $op==display_act}
+              {include file='display_act.html'}
+            {else if $op=="act_form"}
+              {include file='act_form.html'}
+            {else if $op=="act_list"}
+              {include file='act_list.html'}
+            {else}
+              {include file='panel_list.html'}
+            {/if}
+          </div>
+        {/if}
+        {if !$isuser}
           {if $op=="user_form"}
             <div class="col-md-9">
               {include file='user_form.html'}
             </div>
           {else}
-            <div class="col-md-7">
+            <div class="col-md-5">
               {include file='user_login.html'}
             </div>
+            <div class="col-md-7">
+              {include file='latest_act.html'}
+            </div>
           {/if}
-        {else if $isuser}
-          <div class="col-md-3">
-            {include file='side_tool.html'}
-          </div>
+        {/if}
+        {if $isuser}
+            <div class="col-md-3">
+              {include file='side_tool.html'}
+              {include file='side_act.html'}
+            </div>
         {/if}
       </div>
 
       <div id="system_foot">
-        <div>當前版本 : vision-1.0.0 beta</div>
-        <div>開發者：TfcisPika</div>
+        <div>當前版本 : vision-1.1.1 beta</div>
+        <div>開發者：伊嵐</div>
       </div>
     </div>
   </body>

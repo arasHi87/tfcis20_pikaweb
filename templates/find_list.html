@@ -1,0 +1,45 @@
+<h1>搜尋結果</h1>
+<h3>單元搜尋結果</h3>
+{if isset($all_goods) and $all_goods != ''}
+<div class="row">
+  {foreach from=$all_goods item=goods}
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <a href="good.php?op=display_goods&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}"><img src="{$goods.pic}" alt="{$goods.goods_title}"></a>
+        <div class="caption">
+          <div style="height: 60px;">
+            <h3><a href="good.php?op=display_goods&goods_sn={$goods.goods_sn}">{$goods.goods_title}</a></h3>
+          </div>
+          <div class="row">
+            <div class="col-md-6">人氣：{$goods.goods_counter}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {/foreach}
+</div>
+{else}
+在單元中並沒有符合的搜尋結果喔QAQ
+{/if}
+<h3>公告搜尋結果</h3>
+{if isset($all_act) and $all_act != ''}
+<div class="row">
+  {foreach from=$all_act item=act}
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <a href="act.php?op=display_act&act_sn={$act.act_sn}"><img src="{$act.pic}" alt="{$act.act_title}"></a>
+        <div class="caption">
+          <div style="height: 60px;">
+            <h3><a href="act.php?op=display_act&act_sn={$act.act_sn}">{$act.act_title}</a></h3>
+          </div>
+          <div class="row">
+            <div class="col-md-6">人氣：{$act.act_counter}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {/foreach}
+</div>
+{else}
+在公告中沒有符合的搜尋結果喔QAQ
+{/if}
