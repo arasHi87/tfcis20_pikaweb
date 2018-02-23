@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 11:33:34
+/* Smarty version 3.1.29, created on 2018-02-23 15:34:59
   from "D:\UniServerZ\www\pika\templates\panel_list.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8eaa8e908db3_36476513',
+  'unifunc' => 'content_5a9034a396f737_98328798',
   'file_dependency' => 
   array (
     '83cec5db92df8fc2eebf8ea0cb99f1df7e927616' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\panel_list.html',
-      1 => 1519299207,
+      1 => 1519399787,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8eaa8e908db3_36476513 ($_smarty_tpl) {
+function content_5a9034a396f737_98328798 ($_smarty_tpl) {
 ?>
 <div class="row">
   <?php

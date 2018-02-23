@@ -8,7 +8,7 @@ function save_panel_pic($panel_sn = "")
         //大圖
         $pic->file_new_name_body = $panel_sn;
         $pic->file_overwrite     = true;
-        $pic->image_resize       = false;
+        $pic->image_resize       = true;
         $pic->image_x            = 1200;
         $pic->image_y            = 800;
         $pic->image_convert      = 'png';
@@ -20,7 +20,7 @@ function save_panel_pic($panel_sn = "")
         //縮圖
         $pic->file_new_name_body = $panel_sn;
         $pic->file_overwrite     = true;
-        $pic->image_resize       = false;
+        $pic->image_resize       = true;
         $pic->image_x            = 300;
         $pic->image_y            = 200;
         $pic->image_convert      = 'png';
