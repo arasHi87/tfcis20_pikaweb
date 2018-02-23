@@ -33,11 +33,8 @@ $smarty->assign('isadmin', $isadmin);
 $smarty->assign('isuser', $isuser);
 
 /* 流程 */
-if ($isuser) {
-  side_act();
-} else {
-  latest_act();
-}
+side_act();
+latest_act();
 
 /* 本檔案使用函數 */
 

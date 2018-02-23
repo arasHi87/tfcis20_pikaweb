@@ -1,4 +1,7 @@
 <?php
+if (!$isadmin) {
+    return;
+  }
 //站務編輯表單
 function act_form($act_sn)
 {

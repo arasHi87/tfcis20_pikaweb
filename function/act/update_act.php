@@ -1,4 +1,7 @@
 <?php
+if (!$isadmin) {
+  return;
+}
 function update_act()
 {
   global $mysqli;

@@ -8,11 +8,7 @@ $op = isset($_REQUEST['op']) ? my_filter($_REQUEST['op'], "string") : '';
 switch ($op) {
 
   default:
-      if ($isuser) {
-        header("location:panel.php");
-      } else {
-        $op = 'user_login';
-      }
+      header("location:panel.php");
       break;
 }
 

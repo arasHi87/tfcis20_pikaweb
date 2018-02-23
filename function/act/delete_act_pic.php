@@ -1,4 +1,7 @@
 <?php
+if (!$isadmin) {
+    return;
+  }
 //刪除圖片
 function delete_act_pic($act_sn = "")
 {

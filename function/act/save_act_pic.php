@@ -1,4 +1,7 @@
 <?php
+if (!$isadmin) {
+    return;
+  }
 //儲存圖片
 function save_act_pic($act_sn = "")
 {

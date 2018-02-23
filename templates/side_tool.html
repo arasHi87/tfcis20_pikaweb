@@ -2,14 +2,7 @@
   <input type="hidden" name="op" value="user_login">
   <div class="alert alert-danger">請先登入!</div>
 {else}
-  <form action="find.php" method="get" role="form">
-    <div class="input-group">
-      <input name="keyword" type="text"class="form-control" placeholder="請輸入關鍵字">
-      <span class="input-group-btn">
-        <button class="btn btn-warning" type="submit">搜尋</button>
-      </span>
-    </div>
-  </form>
+  {include file='side_find.html'}
   <br>
   <form action="user.php" method="post" role="form" class="form-horizion">
     <div class="panel panel-primary">

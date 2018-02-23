@@ -1,9 +1,6 @@
 <?php
 /* 引入 */
 require_once "header.php";
-if (!$isuser) {
-    return;
-}
 
 /* 流程控制 */
 $op       = isset($_REQUEST['op']) ? my_filter($_REQUEST['op'], "string") : '';
@@ -45,6 +42,7 @@ switch ($op) {
   default:
     require_once "function/panel/panel_list.php";
     panel_list();
+    $op = 'panel_list';
 }
 
 /* 輸出 */

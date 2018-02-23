@@ -2,10 +2,6 @@
 /* 引入 */
 require_once "header.php";
 
-if (!$isadmin) {
-  return;
-}
-
 /* 流程控制 */
 $op       = isset($_REQUEST['op']) ? my_filter($_REQUEST['op'], "string") : '';
 $act_sn  = isset($_REQUEST['act_sn']) ? my_filter($_REQUEST['act_sn'], "int") : 0;

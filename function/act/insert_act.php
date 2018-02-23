@@ -1,4 +1,7 @@
 <?php
+if (!$isadmin) {
+  return;
+}
 //儲存公告
 function insert_act()
 {

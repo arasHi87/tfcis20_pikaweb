@@ -1,4 +1,7 @@
 <?php
+if (!$isadmin) {
+    return;
+  }
 //刪除公告
 function delete_act($act_sn)
 {
