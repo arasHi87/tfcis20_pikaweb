@@ -2,6 +2,10 @@
 //儲存圖片
 function save_goods_pic($goods_sn = "", $panel_sn="")
 {
+    $size = $_FILES['goods_pic']['size'];
+    if ($size > 10240000) {
+        return;
+    }
     include_once "class/upload/class.upload.php";
     $pic = new Upload($_FILES['goods_pic'], 'zh_TW');
     if ($pic->uploaded) {
