@@ -3,9 +3,6 @@
 function display_goods($goods_sn = '', $panel_sn = '')
 {
     global $mysqli, $smarty, $isuser;
-    if (!$isuser) {
-        return;
-      }
     add_goods_counter($goods_sn);
     $sql = "SELECT a.*,b.* FROM `goods` AS a
     JOIN `users` AS b on a.`user_sn`=b.`user_sn`

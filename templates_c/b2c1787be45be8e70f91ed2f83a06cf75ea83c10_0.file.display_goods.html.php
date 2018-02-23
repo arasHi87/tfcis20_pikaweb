@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 11:34:13
+/* Smarty version 3.1.29, created on 2018-02-23 01:55:09
   from "D:\UniServerZ\www\pika\templates\display_goods.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8eaab5be4936_97388921',
+  'unifunc' => 'content_5a8f747d9b7003_87419367',
   'file_dependency' => 
   array (
     'b2c1787be45be8e70f91ed2f83a06cf75ea83c10' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\display_goods.html',
-      1 => 1516970766,
+      1 => 1519350905,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8eaab5be4936_97388921 ($_smarty_tpl) {
+function content_5a8f747d9b7003_87419367 ($_smarty_tpl) {
 ?>
 <div class="row">
   <div class="col-md-6">
@@ -60,12 +60,12 @@ function content_5a8eaab5be4936_97388921 ($_smarty_tpl) {
 </div>
 <br>
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#another_goods" aria-controls="another_goods" role="tab" data-toggle="tab">補充資料</a></li>
-  <li role="presentation"><a href="#goods_file" aria-controls="goods_file" role="tab" data-toggle="tab">檔案下載</a></li>
+  <li><a data-toggle="tab" href="#another_goods">單元補充</a></li>
+  <li><a data-toggle="tab" href="#goods_file">下載檔案</a></li>
 </ul>
 <br>
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane" id="another_goods">
+  <div id="another_goods" class="tab-pane fade  in active">
     <?php if (isset($_smarty_tpl->tpl_vars['goods']->value['goods_another']) && $_smarty_tpl->tpl_vars['goods']->value['goods_another'] != '') {?>
       <?php echo $_smarty_tpl->tpl_vars['goods']->value['goods_another'];?>
 
@@ -73,7 +73,7 @@ function content_5a8eaab5be4936_97388921 ($_smarty_tpl) {
       本單元暫時沒有補充喔!!!
     <?php }?>
   </div>
-  <div role="tabpanel" class="tab-pane" id="goods_file">
+  <div id="goods_file" class="tab-pane fade">
     <?php if (isset($_smarty_tpl->tpl_vars['goods']->value['goods_name']) && ($_smarty_tpl->tpl_vars['goods']->value['goods_name']) != '') {?>
       <a href="good.php?op=download_file&goods_sn=<?php echo $_smarty_tpl->tpl_vars['goods']->value['goods_sn'];?>
 &panel_sn=<?php echo $_smarty_tpl->tpl_vars['goods']->value['panel_sn'];?>

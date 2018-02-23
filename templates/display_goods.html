@@ -25,19 +25,19 @@
 </div>
 <br>
 <ul class="nav nav-tabs">
-  <li role="presentation" class="active"><a href="#another_goods" aria-controls="another_goods" role="tab" data-toggle="tab">補充資料</a></li>
-  <li role="presentation"><a href="#goods_file" aria-controls="goods_file" role="tab" data-toggle="tab">檔案下載</a></li>
+  <li><a data-toggle="tab" href="#another_goods">單元補充</a></li>
+  <li><a data-toggle="tab" href="#goods_file">下載檔案</a></li>
 </ul>
 <br>
 <div class="tab-content">
-  <div role="tabpanel" class="tab-pane" id="another_goods">
+  <div id="another_goods" class="tab-pane fade  in active">
     {if isset($goods.goods_another) and $goods.goods_another != ''}
       {$goods.goods_another}
     {else}
       本單元暫時沒有補充喔!!!
     {/if}
   </div>
-  <div role="tabpanel" class="tab-pane" id="goods_file">
+  <div id="goods_file" class="tab-pane fade">
     {if isset($goods.goods_name) and ($goods.goods_name) != ''}
       <a href="good.php?op=download_file&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}">點我下載檔案</a>
     {else}
