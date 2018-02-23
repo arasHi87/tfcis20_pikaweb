@@ -62,34 +62,33 @@
           </div>
         {/if}
         {if !$isuser}
-          <div class="col-md-9">
-            {if $op=="panel_form"}
-              {include file='panel_form.html'}
-            {else if $op=="panel_list"}
-              {include file='panel_list.html'}
-            {else if $op=="display_panel"}
-              {include file='display_panel.html'}
-            {else if $op=="goods_form"}
-              {include file='goods_form.html'}
-            {else if $op=='find_list'}
-              {include file='find_list.html'}
-            {else if $op=="display_goods"}
-              {include file='display_goods.html'}
-            {else if $op==display_act}
-              {include file='display_act.html'}
-            {else if $op=="act_form"}
-              {include file='act_form.html'}
-            {else if $op=="act_list"}
-              {include file='act_list.html'}
-            {else if $op='user_login'}
-              {include file='user_login.html'}
-            {else}
-              {include file='panel_list.html'}
-            {/if}
+        <div class="col-md-9">
+          {if $op=="panel_form"}
+            {include file='panel_form.html'}
+          {else if $op=="panel_list"}
+            {include file='panel_list.html'}
+          {else if $op=="display_panel"}
+            {include file='display_panel.html'}
+          {else if $op=="goods_form"}
+            {include file='goods_form.html'}
+          {else if $op=='find_list'}
+            {include file='find_list.html'}
+          {else if $op=="display_goods"}
+            {include file='display_goods.html'}
+          {else if $op==display_act}
+            {include file='display_act.html'}
+          {else if $op=="act_form"}
+            {include file='act_form.html'}
+          {else if $op=="act_list"}
+            {include file='act_list.html'}
+          {else if $op='user_login'}
+            {include file='user_login.html'}
+          {else}
+            {include file='panel_list.html'}
+          {/if}
           </div>
           <div class="col-md-3">
-            {include file='side_find.html'}
-            <br>
+            {include file='side_tool.html'}
             {include file='side_act.html'}
           </div>
         {/if}
