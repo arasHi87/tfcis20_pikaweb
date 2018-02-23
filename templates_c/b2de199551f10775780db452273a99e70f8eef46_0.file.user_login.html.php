@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 11:26:54
+/* Smarty version 3.1.29, created on 2018-02-23 05:07:59
   from "D:\UniServerZ\www\pika\templates\user_login.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8ea8fecf75d2_83926740',
+  'unifunc' => 'content_5a8fa1af09f8d6_46878904',
   'file_dependency' => 
   array (
     'b2de199551f10775780db452273a99e70f8eef46' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\user_login.html',
-      1 => 1516717681,
+      1 => 1519362472,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8ea8fecf75d2_83926740 ($_smarty_tpl) {
+function content_5a8fa1af09f8d6_46878904 ($_smarty_tpl) {
 ?>
 <form action="user.php" method="post" role="form" class="form-horizontal">
   <div class="form-group">
@@ -35,9 +35,7 @@ function content_5a8ea8fecf75d2_83926740 ($_smarty_tpl) {
     </div>
   </div>
   <div class="form-group">
-    <label class="col-md-2 control-label">
-      <a href="user.php?op=user_form" class="btn btn-link">註冊</a>
-    </label>
+    <div class="col-md-2"></div>
     <div class="col-md-5">
       <input type="hidden" name="op" value="user_login">
       <button type="submit" name="button" class="btn btn-primary btn-block">登入</button>
