@@ -78,3 +78,24 @@ function latest_act() {
     $smarty->assign('latest_act', $latest_act);
     $smarty->assign('bar', $bar);
 }
+
+//熱門貼文
+function hot_goods()
+{
+  global $mysqli, $smarty;
+  $sql    = "SELECT * FROM `goods` ORDER BY `goods_counter` desc";
+  $PageBar = getPageBar($sql, 3, 1);
+  $bar     = $PageBar['bar'];
+  $sql     = $PageBar['sql'];
+  $total   = $PageBar['total'];
+  $result = $mysqli->query($sql) or die($mysqli->connect_error);
+  $i      = 0;
+  while ($goods = $result->fetch_assoc()) {
+    $all_hot_goods[$i] = $goods;
+    $all_hot_goods[$i]['pic'] = get_goods_pic($goods['goods_sn'], 'thumbs');
+    $i++;
+  }
+  $smarty->assign('all_hot_goods', $all_hot_goods);
+  $smarty->assign('total', $total);
+  $smarty->assign('bar', $bar);
+}

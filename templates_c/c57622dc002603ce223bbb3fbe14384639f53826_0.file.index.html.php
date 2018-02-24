@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-23 05:03:57
+/* Smarty version 3.1.29, created on 2018-02-23 16:30:08
   from "D:\UniServerZ\www\pika\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8fa0bda19764_91006520',
+  'unifunc' => 'content_5a904190b41b96_90683872',
   'file_dependency' => 
   array (
     'c57622dc002603ce223bbb3fbe14384639f53826' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\index.html',
-      1 => 1519362233,
+      1 => 1519403405,
       2 => 'file',
     ),
   ),
@@ -31,10 +31,11 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:act_list.html' => 2,
     'file:user_login.html' => 1,
     'file:side_tool.html' => 2,
+    'file:side_goods.html' => 1,
     'file:side_act.html' => 2,
   ),
 ),false)) {
-function content_5a8fa0bda19764_91006520 ($_smarty_tpl) {
+function content_5a904190b41b96_90683872 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant">
@@ -194,6 +195,9 @@ function content_5a8fa0bda19764_91006520 ($_smarty_tpl) {
           </div>
           <div class="col-md-3">
             <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:side_tool.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+            <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:side_goods.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
             <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:side_act.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
