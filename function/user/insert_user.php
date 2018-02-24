@@ -18,10 +18,10 @@ function insert_user()
      }
 
      $user_passwd = password_hash($_POST['user_passwd'], PASSWORD_DEFAULT);
-     if (in_array($user_id, $admin_array)) {
-       $user_right = 'isadmin';
-       if(in_array($user_id, $topadmin_array)) {
-         $user_right = 'topadmin';
+     if (in_array($user_id, $topadmin_array)) {
+       $user_right = 'topadmin';
+       if(in_array($user_id, $admin_array)) {
+         $user_right = 'isadmin';
        }
      } else {
        $user_right = 'isuser';

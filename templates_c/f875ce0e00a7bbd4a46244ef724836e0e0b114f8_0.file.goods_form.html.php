@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-22 13:54:37
+/* Smarty version 3.1.29, created on 2018-02-24 10:35:09
   from "D:\UniServerZ\www\pika\templates\goods_form.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a8ecb9dc0d290_71396011',
+  'unifunc' => 'content_5a913fddc82c17_56829360',
   'file_dependency' => 
   array (
     'f875ce0e00a7bbd4a46244ef724836e0e0b114f8' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\goods_form.html',
-      1 => 1516970562,
+      1 => 1519468505,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a8ecb9dc0d290_71396011 ($_smarty_tpl) {
+function content_5a913fddc82c17_56829360 ($_smarty_tpl) {
 ?>
 <h1>編輯單元</h1>
 <form action="good.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
@@ -57,7 +57,7 @@ function content_5a8ecb9dc0d290_71396011 ($_smarty_tpl) {
     <div class="form-group">
         <label class="col-md-2 control-label">單元圖片：</label>
         <div class="col-md-10">
-            <input type="file" name="goods_pic" id="goods_pic">
+            <input type="file" name="goods_pic" id="goods_pic" accept="image/gif, image/jpeg, image/png, image/jpg">
             <br>
             <?php if (isset($_smarty_tpl->tpl_vars['goods']->value['pic'])) {?>
               <div class="row">

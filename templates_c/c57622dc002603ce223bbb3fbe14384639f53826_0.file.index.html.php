@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-23 16:30:08
+/* Smarty version 3.1.29, created on 2018-02-24 13:58:40
   from "D:\UniServerZ\www\pika\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a904190b41b96_90683872',
+  'unifunc' => 'content_5a916f90a8b617_83394846',
   'file_dependency' => 
   array (
     'c57622dc002603ce223bbb3fbe14384639f53826' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\index.html',
-      1 => 1519403405,
+      1 => 1519480715,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
     'file:user_list.html' => 1,
     'file:display_user.html' => 1,
-    'file:user_form.html' => 1,
+    'file:user_form.html' => 2,
     'file:panel_form.html' => 2,
     'file:panel_list.html' => 4,
     'file:display_panel.html' => 2,
@@ -35,7 +35,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:side_act.html' => 2,
   ),
 ),false)) {
-function content_5a904190b41b96_90683872 ($_smarty_tpl) {
+function content_5a916f90a8b617_83394846 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant">
@@ -185,6 +185,10 @@ function content_5a904190b41b96_90683872 ($_smarty_tpl) {
 
           <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'user_login') {?>
             <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_login.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
+?>
+
+          <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'user_form') {?>
+            <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
 
           <?php } else { ?>
