@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-24 13:58:40
+/* Smarty version 3.1.29, created on 2018-02-26 04:20:33
   from "D:\UniServerZ\www\pika\templates\index.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a916f90a8b617_83394846',
+  'unifunc' => 'content_5a938b11612c08_01658501',
   'file_dependency' => 
   array (
     'c57622dc002603ce223bbb3fbe14384639f53826' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\index.html',
-      1 => 1519480715,
+      1 => 1519618767,
       2 => 'file',
     ),
   ),
@@ -35,7 +35,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
     'file:side_act.html' => 2,
   ),
 ),false)) {
-function content_5a916f90a8b617_83394846 ($_smarty_tpl) {
+function content_5a938b11612c08_01658501 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <html lang="zh-Hant">
@@ -187,7 +187,7 @@ function content_5a916f90a8b617_83394846 ($_smarty_tpl) {
             <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_login.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, false);
 ?>
 
-          <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == 'user_form') {?>
+          <?php } elseif ($_smarty_tpl->tpl_vars['op']->value == "user_form") {?>
             <?php $_smarty_tpl->smarty->ext->_subtemplate->render($_smarty_tpl, "file:user_form.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0, true);
 ?>
 
