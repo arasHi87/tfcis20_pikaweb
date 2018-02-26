@@ -35,6 +35,7 @@ $smarty->assign('isuser', $isuser);
 /* 流程 */
 side_act();
 latest_act();
+hot_goods();
 
 /* 本檔案使用函數 */
 
@@ -79,6 +80,7 @@ function latest_act() {
     $smarty->assign('bar', $bar);
 }
 
+
 //熱門貼文
 function hot_goods()
 {
@@ -92,7 +94,7 @@ function hot_goods()
   $i      = 0;
   while ($goods = $result->fetch_assoc()) {
     $all_hot_goods[$i] = $goods;
-    $all_hot_goods[$i]['pic'] = get_goods_pic($goods['goods_sn'], 'thumbs');
+    $all_hot_goods[$i]['pic'] = get_goods_pic($goods['goods_sn'], $goods['panel_sn'], 'thumbs');
     $i++;
   }
   $smarty->assign('all_hot_goods', $all_hot_goods);

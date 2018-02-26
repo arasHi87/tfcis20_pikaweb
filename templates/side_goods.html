@@ -4,11 +4,12 @@
       {foreach from=$all_hot_goods item=goods}
       <div class="col-md-12">
         <div class="thumbnail">
-          <a href="good.php?op=display_goods&goods_sn={$goods.goods_sn}"><img src="{$goods.pic}" alt="{$goods.goods_title}"></a>
+          <a href="good.php?op=display_goods&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}"><img src="{$goods.pic}" alt="{$goods.goods_title}"></a>
           <div class="caption">
             <div style="height: 60px;">
-              <h3><a href="good.php?op=display_goods&goods_sn={$goods.goods_sn}">{$goods.goods_title}</a></h3>
+              <h3><a href="good.php?op=display_goods&goods_sn={$goods.goods_sn}&panel_sn={$goods.panel_sn}">{$goods.goods_title}</a></h3>
             </div>
+            <br>
             <div class="row">
               <div class="col-md-12">瀏覽人數：{$goods.goods_counter}</div>
             </div>
