@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-23 16:18:57
+/* Smarty version 3.1.29, created on 2018-02-26 04:52:12
   from "D:\UniServerZ\www\pika\templates\panel_form.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a903ef172b231_16442139',
+  'unifunc' => 'content_5a93927c3adce2_66365884',
   'file_dependency' => 
   array (
     '94362f9da4df5b0e1114c29b3d6fe222bbf66dec' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\panel_form.html',
-      1 => 1503836682,
+      1 => 1519620713,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a903ef172b231_16442139 ($_smarty_tpl) {
+function content_5a93927c3adce2_66365884 ($_smarty_tpl) {
 ?>
 <h1>編輯面板</h1>
 <form action="panel.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
@@ -40,7 +40,7 @@ function content_5a903ef172b231_16442139 ($_smarty_tpl) {
   </div>
 
   <div class="form-group">
-    <label class="col-md-2">面板圖片：</label>
+    <label class="col-md-2 control-label">面板圖片：</label>
     <div class="col-md-10">
       <input type="file" name="panel_pic" id="panel_pic">
       <?php if (isset($_smarty_tpl->tpl_vars['panel']->value['pic'])) {?>
