@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2018-02-24 10:35:09
+/* Smarty version 3.1.29, created on 2018-03-09 14:27:54
   from "D:\UniServerZ\www\pika\templates\goods_form.html" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_5a913fddc82c17_56829360',
+  'unifunc' => 'content_5aa299ea02d256_57778424',
   'file_dependency' => 
   array (
     'f875ce0e00a7bbd4a46244ef724836e0e0b114f8' => 
     array (
       0 => 'D:\\UniServerZ\\www\\pika\\templates\\goods_form.html',
-      1 => 1519468505,
+      1 => 1520605669,
       2 => 'file',
     ),
   ),
@@ -19,8 +19,22 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_5a913fddc82c17_56829360 ($_smarty_tpl) {
-?>
+function content_5aa299ea02d256_57778424 ($_smarty_tpl) {
+echo '<script'; ?>
+>
+    function openFile(event){
+    var input = event.target; //取得上傳檔案
+    var reader = new FileReader(); //建立FileReader物件
+  
+    reader.readAsDataURL(input.files[0]); //以.readAsDataURL將上傳檔案轉換為base64字串
+  
+    reader.onload = function(){ //FileReader取得上傳檔案後執行以下內容
+      var dataURL = reader.result; //設定變數dataURL為上傳圖檔的base64字串
+      $('#output').attr('src', dataURL).show(); //將img的src設定為dataURL並顯示
+    };
+  }
+<?php echo '</script'; ?>
+>
 <h1>編輯單元</h1>
 <form action="good.php" method="post" class="form-horizontal" role="form" enctype="multipart/form-data">
     <div class="form-group">
@@ -57,19 +71,26 @@ function content_5a913fddc82c17_56829360 ($_smarty_tpl) {
     <div class="form-group">
         <label class="col-md-2 control-label">單元圖片：</label>
         <div class="col-md-10">
-            <input type="file" name="goods_pic" id="goods_pic" accept="image/gif, image/jpeg, image/png, image/jpg">
-            <br>
-            <?php if (isset($_smarty_tpl->tpl_vars['goods']->value['pic'])) {?>
-              <div class="row">
+            <input type="file" name="goods_pic" id="goods_pic" accept="image/gif, image/jpeg, image/png, image/jpg" onchange="openFile(event)">
+            <div class="row">
                 <div class="col-md-6">
-                  <a href="#" class="thumbnail">
-                    <img src="<?php echo $_smarty_tpl->tpl_vars['goods']->value['pic'];?>
+                    <a href="#" class="thumbnail">
+                        <img id="output" height="200" style="display:none">
+                    </a>
+                </div>
+            </div>
+            <br>
+            <?php if (isset($_smarty_tpl->tpl_vars['goods_pic']->value)) {?>
+            <div class="row">
+              <div class="col-md-6">
+                <a href="#" class="thumbnail">
+                <img src="<?php echo $_smarty_tpl->tpl_vars['goods']->value['pic'];?>
 " alt="<?php echo $_smarty_tpl->tpl_vars['goods']->value['goods_title'];?>
 ">
-                  </a>
-                </div>
-              </div>
-            <?php }?>
+                </a>
+            </div>
+          </div>
+          <?php }?>
         </div>
     </div>
 
